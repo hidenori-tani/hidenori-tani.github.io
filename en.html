@@ -7,7 +7,8 @@
 <meta name="description" content="Hidenori Tani, Ph.D., Yokohama University of Pharmacy. We measure how long RNA lives, and use that time axis to work out what long noncoding RNAs do.">
 <link rel="alternate" hreflang="ja" href="index.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=7cb24392">
+<link rel="stylesheet" href="style.css?v=22a5649b">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <!--nav:start--><nav class="nav"><div class="nav__in">
@@ -125,7 +126,7 @@
 </section>
 
 <section class="panel panel--dark" id="papers">
-  <div class="wrap center">
+<!--recent:start-->  <div class="wrap center">
     <p class="eyebrow">2026</p>
     <h2 class="headline">Eight months<br>of output.</h2>
     <p class="intro read">Twelve papers from the group.</p>
@@ -135,7 +136,7 @@
         <div>
           <p class="paper__j">Molecular Genetics and Genomics</p>
           <p class="paper__t">Codon optimality predicts mRNA half-life but does not transfer to lncRNAs</p>
-          <div class="paper__tags"><span class="tag tag--paper">Paper</span><span class="tag">IF 2.2</span></div>
+          <div class="paper__tags"><span class="tag tag--paper">Article</span><span class="tag">IF 2.2</span></div>
         </div>
       </li>
       <li class="paper rise">
@@ -159,7 +160,7 @@
         <div>
           <p class="paper__j">Brain Research</p>
           <p class="paper__t">A replicated astrocyte long non-coding RNA signature of Alzheimer's disease is inverted in amyotrophic lateral sclerosis</p>
-          <div class="paper__tags"><span class="tag tag--paper">Paper</span><span class="tag">IF 3.2</span></div>
+          <div class="paper__tags"><span class="tag tag--paper">Article</span><span class="tag">IF 3.2</span></div>
         </div>
       </li>
       <li class="paper rise">
@@ -167,7 +168,7 @@
         <div>
           <p class="paper__j">Gene</p>
           <p class="paper__t">RNA decay rate as a control point for long non-coding RNA function: a BRIC-based causal analysis of NEAT1</p>
-          <div class="paper__tags"><span class="tag tag--paper">Paper</span><span class="tag">IF 2.9</span></div>
+          <div class="paper__tags"><span class="tag tag--paper">Article</span><span class="tag">IF 2.9</span></div>
         </div>
       </li>
       <li class="paper rise">
@@ -175,7 +176,7 @@
         <div>
           <p class="paper__j">Molecular Genetics and Genomics</p>
           <p class="paper__t">Subcellular localization of human long non-coding RNAs is an isoform-resolved property masked by gene-level analysis</p>
-          <div class="paper__tags"><span class="tag tag--paper">Paper</span><span class="tag">IF 2.2</span></div>
+          <div class="paper__tags"><span class="tag tag--paper">Article</span><span class="tag">IF 2.2</span></div>
         </div>
       </li>
       <li class="paper rise">
@@ -183,7 +184,7 @@
         <div>
           <p class="paper__j">Functional &amp; Integrative Genomics</p>
           <p class="paper__t">A single-cell cell-of-origin audit of the lncRNA RMST</p>
-          <div class="paper__tags"><span class="tag tag--paper">Paper</span><span class="tag">IF 4.0</span></div>
+          <div class="paper__tags"><span class="tag tag--paper">Article</span><span class="tag">IF 4.0</span></div>
         </div>
       </li>
       <li class="paper rise">
@@ -215,7 +216,7 @@
         <div>
           <p class="paper__j">International Journal of Molecular Sciences</p>
           <p class="paper__t">RNA-Binding Protein Occupancy Composition Predicts Long Noncoding RNA Subcellular Localization</p>
-          <div class="paper__tags"><span class="tag tag--paper">Paper</span><span class="tag">IF 5.6</span></div>
+          <div class="paper__tags"><span class="tag tag--paper">Article</span><span class="tag">IF 5.6</span></div>
         </div>
       </li>
       <li class="paper rise">
@@ -227,8 +228,9 @@
         </div>
       </li>
     </ol>
-    <p style="margin-top:38px"><a class="btn btn--ghost" href="https://scholar.google.com.au/citations?user=Y5we_eIAAAAJ&amp;hl=en">See the full record</a></p>
+    <p style="margin-top:clamp(34px,4vw,52px)"><a class="btn btn--ghost" href="en-publications.html">See every publication</a></p>
   </div>
+<!--recent:end-->
 </section>
 
 <section class="panel">
@@ -312,15 +314,6 @@
   </div>
 </footer>
 
-<script>
-(function(){
-  var els=document.querySelectorAll('.rise');
-  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
-  },{rootMargin:'0px 0px -6% 0px'});
-  els.forEach(function(e,i){e.style.transitionDelay=(Math.min(i%6,5)*70)+'ms';io.observe(e)});
-})();
-</script>
+<script src="reveal.js" defer></script>
 </body>
 </html>

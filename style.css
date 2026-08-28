@@ -22,8 +22,13 @@
   --review:#d70015;      /* 総説＝赤（明るい面）*/
   --review-d:#ff453a;    /* 総説＝赤（暗い面）*/
 
-  --sans:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",
-         "Hiragino Sans","Hiragino Kaku Gothic ProN","Zen Kaku Gothic New","Noto Sans JP",sans-serif;
+  /* Apple 環境では SF、Windows では Segoe UI Variable、Android では Roboto に落ちる。
+     日本語は Hiragino → Yu Gothic → Noto Sans JP の順（外部フォントは読み込まない＝
+     表示が速く、閲覧が第三者に漏れない）。 */
+  --sans:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",
+         "Segoe UI Variable Display","Segoe UI",Roboto,"Helvetica Neue",Arial,
+         "Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",YuGothic,
+         "Zen Kaku Gothic New","Noto Sans JP","Meiryo",sans-serif;
   --mono:"SF Mono",ui-monospace,SFMono-Regular,Menlo,"IBM Plex Mono",monospace;
 
   --gut:clamp(22px,5vw,60px);
@@ -182,11 +187,13 @@ h3.title{
 /* ---- 動き（Apple のスクロール・リビール。控えめに） ---- */
 .draw{stroke-dasharray:2600;stroke-dashoffset:2600;animation:draw 2.6s cubic-bezier(.25,.6,.3,1) .25s forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
-.rise{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.28,.6,.3,1),transform .8s cubic-bezier(.28,.6,.3,1)}
-.rise.in{opacity:1;transform:none}
+/* 🚨 .js が付くのは <head> のスクリプトが動いたときだけ。JS を切っている読者には
+   最初から見えている必要がある（この縛りが無いと30要素が空白のままになる） */
+.js .rise{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.28,.6,.3,1),transform .8s cubic-bezier(.28,.6,.3,1)}
+.js .rise.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){
   .draw{animation:none;stroke-dashoffset:0}
-  .rise{opacity:1;transform:none;transition:none}
+  .js .rise{opacity:1;transform:none;transition:none}
   *{animation-duration:.001ms !important;transition-duration:.001ms !important}
 }
 
