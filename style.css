@@ -363,3 +363,25 @@ h3.title{
   clip:rect(0 0 0 0);white-space:nowrap;border:0;
 }
 :where(a,button,input,summary):focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* ---- 経歴・研究概要ページ ---- */
+.plain{list-style:none;margin:1.1em 0 0;padding:0}
+.plain li{
+  position:relative;padding-left:1.15em;margin-top:.45em;
+  font-size:15.5px;line-height:1.75;color:var(--ink-2);
+}
+.plain li::before{content:"";position:absolute;left:0;top:.72em;width:5px;height:5px;border-radius:50%;background:var(--blue)}
+.panel--dark .plain li{color:var(--paper-2)}
+.panel--dark .plain li::before{background:var(--blue-d)}
+.cardh{
+  margin:.55em 0 .5em;font-size:17px;font-weight:600;letter-spacing:-.015em;
+  color:var(--ink);text-align:left;
+}
+.panel--dark .cardh{color:var(--paper)}
+.pitem__b.jr{color:var(--ink-2)}
+.panel--dark .pitem{border-top-color:rgba(255,255,255,.14)}
+.panel--dark .pitem:last-child{border-bottom-color:rgba(255,255,255,.14)}
+.panel--dark .pitem__b{color:var(--paper)}
+.panel--dark .pitem__b.jr,.panel--dark .pitem__n{color:var(--paper-2)}
+.panel--dark .pubsec__n{color:var(--paper-2)}
+.panel--dark .dl__v a{color:var(--blue-d)}
