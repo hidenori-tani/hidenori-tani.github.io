@@ -351,7 +351,10 @@ h3.title{
   padding:9px 16px;-webkit-appearance:none;appearance:none;
 }
 .find input::placeholder{color:var(--ink-2)}
-.find input:focus{outline:0;border-color:var(--accent);background:#fff}
+.find input:focus{border-color:var(--accent);background:#fff}
+/* クリックで入ったときだけ輪郭を消す。キーボードで来た読者には :focus-visible の輪郭を残す
+   （旧 `outline:0` は詳細度で :focus-visible の指定に勝ってしまい、両方消していた） */
+.find input:focus:not(:focus-visible){outline:0}
 .filter__st{
   margin:0;padding-bottom:11px;font-size:12px;color:var(--ink-2);letter-spacing:0;min-height:1em;
 }
