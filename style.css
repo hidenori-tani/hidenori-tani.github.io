@@ -334,6 +334,11 @@ h3.title{
 @media(prefers-reduced-motion:reduce){.pitem{transition:none}}
 @media(prefers-reduced-motion:reduce){.yr__b{transition:none}}
 
+/* 🚨 .link は見出しの下に置く大きめのリンク（21px・上下9pxの余白）。
+   一覧の行の中で使うと、行が 59px → 88px に伸びて並びが不揃いになり、
+   「シラバス」が科目名より大きく見える（2026-08-29 実測）。行の中では本文に揃える。 */
+.pitem .link{font-size:inherit;line-height:inherit;padding:0;margin-left:.6em}
+
 /* ---- 絞り込みバー（ナビの直下に貼り付く） ---- */
 .filter{
   position:sticky;top:49px;z-index:40;
