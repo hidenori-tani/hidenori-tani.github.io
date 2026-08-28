@@ -257,7 +257,9 @@ h3.title{
   font-size:15px;line-height:1.75;
 }
 @media(min-width:620px){.pitem{grid-template-columns:3.2em 1fr}}
-.pitem:last-child{border-bottom:1px solid rgba(0,0,0,.09)}
+/* 🚨 最後の行に下罫を引くと、次の節の上罫と二重になり、間の余白が1行ぶんの
+   空きに見える（2026-08-29 実測＝102px＝行の高さとほぼ同じ）。節の境目は
+   .pubsec の上罫が引くので、行の側では閉じない。 */
 .pitem__n{font-family:var(--mono);font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums;padding-top:.15em}
 .pitem__b{margin:0;color:var(--ink)}
 .pitem__b .jr{color:var(--ink-2)}
