@@ -385,3 +385,15 @@ h3.title{
 .panel--dark .pitem__b.jr,.panel--dark .pitem__n{color:var(--paper-2)}
 .panel--dark .pubsec__n{color:var(--paper-2)}
 .panel--dark .dl__v a{color:var(--blue-d)}
+
+/* ---- 本文へ飛ぶリンク（キーボードとスクリーンリーダー用・普段は見えない） ---- */
+.skip{
+  position:absolute;left:12px;top:-60px;z-index:100;
+  background:var(--accent);color:#fff;text-decoration:none;
+  padding:11px 20px;border-radius:0 0 10px 10px;font-size:14px;
+  transition:top .18s;
+}
+.skip:focus{top:0}
+main{display:block}
+main:focus{outline:none}
+@media(prefers-reduced-motion:reduce){.skip{transition:none}}
