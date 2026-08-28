@@ -292,6 +292,16 @@ h3.title{
   position:absolute;left:0;right:0;bottom:0;height:var(--hp);
   background:#2997ff;transition:background .25s cubic-bezier(.28,.6,.3,1);
 }
+/* 🚨 携帯では23本が横に並びきらず、1本 12px になる（2026-08-29 実測）。
+   指で押すには 24px 要る（WCAG 2.5.8）。横に流して1本ずつ押せる幅を確保する。
+   overflow-x は .yrs の中で完結させ、ページ自体を横に伸ばさない。 */
+@media(max-width:640px){
+  .yrs{overflow-x:auto;overscroll-behavior-x:contain;padding-bottom:8px;
+       scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.32) transparent}
+  .yr{flex:0 0 auto;width:26px}
+  .yr:last-child{margin-left:14px}
+}
+
 .yr:hover .yr__b,.yr:focus-visible .yr__b{background:rgba(235,240,245,.48)}
 .yr:hover .yr__p,.yr:focus-visible .yr__p{background:#5ab0ff}
 .yr.is-on .yr__b{background:rgba(255,255,255,.5)}
