@@ -314,8 +314,10 @@ h3.title{
 .yr:hover .yr__v,.yr:focus-visible .yr__v,.yr.is-on .yr__v{opacity:1;color:#fff}
 .yr__y{
   display:block;margin-top:10px;font-family:var(--mono);font-size:11px;
+  white-space:nowrap;text-align:center;                 /* 4桁の年が棒より広くても折らない */
   color:var(--paper-2);opacity:.75;letter-spacing:0;font-variant-numeric:tabular-nums;min-height:1em;
 }
+.yr:last-child .yr__y{text-align:left}
 .yr__y.t5{display:none}                         /* 狭い画面では10年刻みだけ */
 @media(min-width:600px){.yr__y.t5{display:block}}
 .yrs__cap{margin-top:18px;line-height:1.9}
