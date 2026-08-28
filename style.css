@@ -19,6 +19,8 @@
   --blue-d:#2997ff;       /* 暗い面のリンク */
   --accent:#0071e3;       /* ボタン */
   --curve:#2997ff;
+  --review:#d70015;      /* 総説＝赤（明るい面）*/
+  --review-d:#ff453a;    /* 総説＝赤（暗い面）*/
 
   --sans:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",
          "Hiragino Sans","Hiragino Kaku Gothic ProN","Zen Kaku Gothic New","Noto Sans JP",sans-serif;
@@ -104,9 +106,10 @@ h3.title{
 
 /* ---- 数字を大きく見せる面 ---- */
 .stats{
-  display:grid;gap:clamp(38px,5vw,56px);margin:clamp(44px,6vw,72px) 0 0;
-  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  display:grid;gap:clamp(34px,4.4vw,52px);margin:clamp(44px,6vw,72px) 0 0;
+  grid-template-columns:repeat(2,1fr);   /* 2列 → 3列。中途半端な折り返しを作らない */
 }
+@media(min-width:700px){.stats{grid-template-columns:repeat(3,1fr)}}
 .stat .n{
   display:block;font-size:clamp(46px,7vw,80px);line-height:1;font-weight:700;
   letter-spacing:-.03em;font-variant-numeric:tabular-nums;
@@ -151,6 +154,9 @@ h3.title{
 .panel--gray .tag,.panel--light .tag{border-color:rgba(0,0,0,.2);color:var(--ink-2)}
 .tag--paper{border-color:var(--blue-d);color:var(--blue-d)}
 .panel--gray .tag--paper,.panel--light .tag--paper{border-color:var(--blue);color:var(--blue)}
+/* 総説は赤（2026-08-29 先生のご指示）*/
+.tag--review{border-color:var(--review-d);color:var(--review-d)}
+.panel--gray .tag--review,.panel--light .tag--review{border-color:var(--review);color:var(--review)}
 
 /* ---- 人物 ---- */
 .person{display:grid;gap:clamp(28px,4vw,54px);align-items:start;margin-top:clamp(40px,5vw,64px)}
@@ -204,3 +210,47 @@ h3.title{
 }
 .panel--dark .bk__t{color:var(--paper-2)}
 @media(prefers-reduced-motion:reduce){.bk img{transition:none}.bk:hover img{transform:none}}
+
+/* ---- ナビ（Apple の細いバー） ---- */
+.nav{
+  position:sticky;top:0;z-index:50;
+  /* 半透明にすると、最上部では背後の白い body が透けて灰色に見える。不透明にする */
+  background:#000;
+  border-bottom:1px solid rgba(255,255,255,.14);
+}
+.nav__in{
+  max-width:var(--maxw);margin:0 auto;padding:0 var(--gut);
+  display:flex;align-items:center;gap:clamp(14px,2.6vw,30px);height:48px;
+  overflow-x:auto;scrollbar-width:none;
+}
+.nav__in::-webkit-scrollbar{display:none}
+.nav a{
+  color:#f5f5f7;text-decoration:none;font-size:12.5px;letter-spacing:-.005em;
+  white-space:nowrap;opacity:.86;transition:opacity .2s;padding:6px 0;
+}
+.nav a:hover{opacity:1}
+.nav a[aria-current="page"]{opacity:1;font-weight:600}
+.nav .home{font-weight:600;opacity:1;margin-right:auto}
+
+/* ---- 業績ページ ---- */
+.pubsec{padding:clamp(56px,8vw,104px) 0;border-top:1px solid rgba(0,0,0,.12);scroll-margin-top:64px}
+.pubsec:first-of-type{border-top:0}
+.pubsec__h{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:clamp(26px,3.4vw,40px)}
+.pubsec__t{font-size:clamp(24px,3.4vw,38px);font-weight:700;letter-spacing:-.022em;margin:0}
+.pubsec__n{font-family:var(--mono);font-size:14px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.plist{list-style:none;margin:0;padding:0;counter-reset:none}
+.pitem{
+  display:grid;gap:4px 20px;padding:16px 0;border-top:1px solid rgba(0,0,0,.09);
+  font-size:15px;line-height:1.75;
+}
+@media(min-width:620px){.pitem{grid-template-columns:3.2em 1fr}}
+.pitem:last-child{border-bottom:1px solid rgba(0,0,0,.09)}
+.pitem__n{font-family:var(--mono);font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums;padding-top:.15em}
+.pitem__b{margin:0;color:var(--ink)}
+.pitem__b .jr{color:var(--ink-2)}
+/* 総説は「丸で囲んだバッジ」だけ赤にする（本文は黒のまま・先生のご指示 2026-08-29） */
+.pubsec__badge{
+  font-family:var(--mono);font-size:11px;letter-spacing:.04em;
+  padding:3px 10px;border-radius:980px;
+  border:1px solid var(--review);color:var(--review);
+}
