@@ -42,7 +42,11 @@
     empty.hidden = shown !== 0;
 
     chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c.dataset.g === state.g)); });
-    yrs.forEach(function (b) { b.classList.toggle('is-on', state.y === b.dataset.year); });
+    yrs.forEach(function (b) {
+      var on = state.y === b.dataset.year;
+      b.classList.toggle('is-on', on);
+      b.setAttribute('aria-pressed', String(on));   // 見た目だけでは読み上げに伝わらない
+    });
 
     var parts = [];
     if (state.g !== 'all') parts.push(document.querySelector('.chip[data-g="' + state.g + '"]').firstChild.nodeValue);
