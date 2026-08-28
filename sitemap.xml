@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.hidenoritani.com/about.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.hidenoritani.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hidenoritani.com/en-about.html"/>
+  </url>
+  <url>
+    <loc>https://www.hidenoritani.com/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.hidenoritani.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hidenoritani.com/en.html"/>
+  </url>
+  <url>
+    <loc>https://www.hidenoritani.com/links.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.hidenoritani.com/links.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hidenoritani.com/en-links.html"/>
+  </url>
+  <url>
+    <loc>https://www.hidenoritani.com/publications.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.hidenoritani.com/publications.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hidenoritani.com/en-publications.html"/>
+  </url>
+  <url>
+    <loc>https://www.hidenoritani.com/research.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.hidenoritani.com/research.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hidenoritani.com/en-research.html"/>
+  </url>
+  <url>
+    <loc>https://www.hidenoritani.com/teaching.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.hidenoritani.com/teaching.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hidenoritani.com/en-teaching.html"/>
+  </url>
+  <url>
+    <loc>https://www.hidenoritani.com/en-about.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hidenoritani.com/en-about.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.hidenoritani.com/about.html"/>
+  </url>
+  <url>
+    <loc>https://www.hidenoritani.com/en-links.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hidenoritani.com/en-links.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.hidenoritani.com/links.html"/>
+  </url>
+  <url>
+    <loc>https://www.hidenoritani.com/en-publications.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hidenoritani.com/en-publications.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.hidenoritani.com/publications.html"/>
+  </url>
+  <url>
+    <loc>https://www.hidenoritani.com/en-research.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hidenoritani.com/en-research.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.hidenoritani.com/research.html"/>
+  </url>
+  <url>
+    <loc>https://www.hidenoritani.com/en-teaching.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hidenoritani.com/en-teaching.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.hidenoritani.com/teaching.html"/>
+  </url>
+  <url>
+    <loc>https://www.hidenoritani.com/en.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hidenoritani.com/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.hidenoritani.com/"/>
+  </url>
+</urlset>
