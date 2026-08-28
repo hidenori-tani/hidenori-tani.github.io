@@ -183,3 +183,24 @@ h3.title{
   .rise{opacity:1;transform:none;transition:none}
   *{animation-duration:.001ms !important;transition-duration:.001ms !important}
 }
+
+/* ---- 著書（Apple のプロダクト棚） ---- */
+.shelf{
+  display:grid;gap:clamp(18px,2.4vw,30px);margin-top:clamp(44px,6vw,72px);
+  grid-template-columns:repeat(auto-fill,minmax(132px,1fr));
+}
+@media(min-width:700px){.shelf{grid-template-columns:repeat(auto-fill,minmax(158px,1fr))}}
+.bk{text-decoration:none;color:inherit;display:block}
+.bk img{
+  width:100%;height:auto;border-radius:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,.16),0 14px 32px rgba(0,0,0,.14);
+  transition:transform .35s cubic-bezier(.28,.6,.3,1), box-shadow .35s;
+}
+.panel--dark .bk img{box-shadow:0 2px 8px rgba(0,0,0,.5),0 16px 38px rgba(0,0,0,.42)}
+.bk:hover img,.bk:focus-visible img{transform:translateY(-6px);box-shadow:0 6px 14px rgba(0,0,0,.2),0 22px 46px rgba(0,0,0,.2)}
+.bk__t{
+  margin:14px 0 0;font-size:13px;line-height:1.55;letter-spacing:-.004em;color:var(--ink-2);
+  text-align:left;
+}
+.panel--dark .bk__t{color:var(--paper-2)}
+@media(prefers-reduced-motion:reduce){.bk img{transition:none}.bk:hover img{transform:none}}
